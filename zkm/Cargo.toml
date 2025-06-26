@@ -6,9 +6,14 @@ edition = "2021"
 
 [dependencies]
 utils = { path = "../utils" }
+guests = {path = "../guests"}
 zkm-build = { git = "https://github.com/zkMIPS/zkMIPS.git" }
 zkm-core-machine = { git = "https://github.com/zkMIPS/zkMIPS.git" }
 zkm-sdk = { git = "https://github.com/zkMIPS/zkMIPS.git" }
 
 [build-dependencies]
 zkm-build = { git = "https://github.com/zkMIPS/zkMIPS.git" }
+
+[patch.crates-io]
+sha2 = { git = "https://github.com/zkMIPS-patches/RustCrypto-hashes", package = "sha2", branch = "patch-sha2-0.10.8" }
+k256 = { git = "https://github.com/zkMIPS-patches/elliptic-curves", branch = "patch-k256-0.13.4" }

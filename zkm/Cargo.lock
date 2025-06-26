@@ -1839,26 +1839,12 @@ checksum = "1c7a8fb8a9fbf66c1f703fe16184d10ca0ee9d23be5b4436400408ba54a95005"
 [[package]]
 name = "ecdsa"
 version = "0.16.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee27f32b5c5292967d2d4a9d7f1e0b0aed2c15daded5a60300e4abb9d8020bca"
-dependencies = [
- "der",
- "digest 0.10.7",
- "elliptic-curve",
- "rfc6979 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "signature",
- "spki",
-]
-
-[[package]]
-name = "ecdsa"
-version = "0.16.9"
 source = "git+https://github.com/zkMIPS-patches/signatures.git?branch=patch-ecdsa-0.16.9#fed1f3bbd4207450cebcc6d601c226f2cccccb3b"
 dependencies = [
  "der",
  "digest 0.10.7",
  "elliptic-curve",
- "rfc6979 0.4.0 (git+https://github.com/zkMIPS-patches/signatures.git?branch=patch-ecdsa-0.16.9)",
+ "rfc6979",
  "serdect",
  "signature",
  "spki",
@@ -3544,7 +3530,7 @@ version = "0.13.4"
 source = "git+https://github.com/zkMIPS-patches/elliptic-curves?branch=patch-k256-0.13.4#3300bc5d1ce55ff652647f023bde45aea145ae3e"
 dependencies = [
  "cfg-if",
- "ecdsa 0.16.9 (git+https://github.com/zkMIPS-patches/signatures.git?branch=patch-ecdsa-0.16.9)",
+ "ecdsa",
  "elliptic-curve",
  "hex",
  "once_cell",
@@ -4146,13 +4132,14 @@ checksum = "b15813163c1d831bf4a13c3610c05c0d03b39feb07f7e09fa234dac9b15aaf39"
 [[package]]
 name = "p256"
 version = "0.13.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9863ad85fa8f4460f9c48cb909d38a0d689dba1f6f6988a5e3e0d31071bcd4b"
+source = "git+https://github.com/zkMIPS-patches/elliptic-curves?branch=patch-p256-0.13.2#26d6bc595c7f685a3c1b2896dbd2d5788d989184"
 dependencies = [
- "ecdsa 0.16.9 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ecdsa",
  "elliptic-curve",
+ "hex",
  "primeorder",
  "sha2",
+ "zkm-lib",
 ]
 
 [[package]]
@@ -4862,9 +4849,8 @@ dependencies = [
 
 [[package]]
 name = "primeorder"
-version = "0.13.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "353e1ca18966c16d9deb1c69278edbc5f194139612772bd9537af60ac231e1e6"
+version = "0.13.1"
+source = "git+https://github.com/zkMIPS-patches/elliptic-curves?branch=patch-p256-0.13.2#26d6bc595c7f685a3c1b2896dbd2d5788d989184"
 dependencies = [
  "elliptic-curve",
 ]
@@ -5399,16 +5385,6 @@ name = "resolv-conf"
 version = "0.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "95325155c684b1c89f7765e30bc1c42e4a6da51ca513615660cb8a62ef9a88e3"
-
-[[package]]
-name = "rfc6979"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8dd2a808d456c4a54e300a23e9f5a67e122c3024119acbfd73e3bf664491cb2"
-dependencies = [
- "hmac",
- "subtle",
-]
 
 [[package]]
 name = "rfc6979"

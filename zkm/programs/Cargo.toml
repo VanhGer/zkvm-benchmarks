@@ -15,3 +15,10 @@ guests = { path = "../../guests" }
 [workspace.package]
 version = "1.1.0"
 edition = "2021"
+
+[patch.crates-io]
+sha2 = { git = "https://github.com/zkMIPS-patches/RustCrypto-hashes", package = "sha2", branch = "patch-sha2-0.10.8" }
+k256 = { git = "https://github.com/zkMIPS-patches/elliptic-curves", branch = "patch-k256-0.13.4" }
+bn = { git = "https://github.com/zkMIPS-patches/bn", branch = "patch-0.6.0", package = "substrate-bn" }
+p256 = { git = "https://github.com/zkMIPS-patches/elliptic-curves", branch = "patch-p256-0.13.2" }
+alloy-primitives-v1-0-0 = { git = "https://github.com/zkMIPS-patches/core.git", package = "alloy-primitives", branch = "patch-alloy-primitives-1.0.0" }

@@ -10,7 +10,7 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-zkm-runtime = { git = "https://github.com/zkMIPS/zkm", rev = "262318f" }
+zkm-runtime = { git = "https://github.com/ProjectZKM/zkm", rev = "262318f" }
 serde = "1.0.204"
 serde_json = "1.0.132"
 
